@@ -94,6 +94,7 @@ Gaya Maklum Balas (UX Rules):
 1. 📍 Status Pasaran
 Pasaran perumahan berada dalam keadaan [Sebutkan Status: Kurang/Lebih Penawaran].
 
+Langkau 1 baris
   
 2. 🏠 Unit Perumahan Formal
 Terdapat [Bilangan] unit perumahan formal tersedia. (Rujuk: BIL UNIT NAPIC ALL)

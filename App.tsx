@@ -49,7 +49,8 @@ const App: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
     { 
       role: 'assistant', 
-      content: 'Hai! Saya JOMRUMAHBOT 🤖 Saya di sini untuk membantu anda memahami trend dan kecukupan penawaran perumahan. Apa yang ingin anda ketahui hari ini?' 
+      content: 'Hai! Saya JOMRUMAHBOT 🤖 
+        Saya di sini untuk membantu anda memahami trend dan kecukupan penawaran perumahan. Apa yang ingin anda ketahui hari ini?' 
     }
   ]);
   const [input, setInput] = useState('');

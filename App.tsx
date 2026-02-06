@@ -22,11 +22,11 @@ import {
 /* ===============================
    ENV – VITE + VERCEL COMPATIBLE
 ================================ */
-const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
+const API_KEY = import.meta.env.VITE_GOOGLE_GENAI_API_KEY;
 
 if (!API_KEY) {
   throw new Error(
-    "❌ VITE_GOOGLE_API_KEY tidak dijumpai. Sila set dalam .env atau Vercel Environment Variables."
+    "❌ VITE_GOOGLE_GENAI_API_KEY tidak dijumpai. Sila set dalam .env atau Vercel Environment Variables."
   );
 }
 
@@ -95,7 +95,7 @@ ${RAW_CSV_DATA}
       `;
 
       const response = await ai.models.generateContent({
-        model: 'gemini-3-flash-preview',
+        model: 'gemini-3-pro-preview',
         contents: messageToSend,
         config: {
           systemInstruction,

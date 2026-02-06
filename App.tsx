@@ -22,7 +22,7 @@ import {
 /* ===============================
    ENV – VITE + VERCEL COMPATIBLE
 ================================ */
-const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 if (!API_KEY) {
   throw new Error(
@@ -80,31 +80,15 @@ const App: React.FC = () => {
       });
 
       const systemInstruction = `
-`Anda ialah JOMRUMAHBOT, pakar analitik perumahan Malaysia yang pintar dan mesra pengguna.
-Tugas utama: Memberi insight mendalam berdasarkan data NAPIC 2024.
+Anda ialah JOMRUMAHBOT, pakar analitik perumahan Malaysia.
+Tugas: Memberi insight berdasarkan data NAPIC 2024.
 
-Gaya Maklum Balas (UX Rules):
-1. Mulakan dengan ringkasan pendek (1-2 ayat).
-2. Jika pengguna bertanya tentang status atau maklumat daerah/negeri tertentu, JANGAN gunakan format perenggan biasa. Anda WAJIB menggunakan struktur jawapan ini secara eksklusif:
-3. Setiap jawapak dikehendaki langkau 1 baris
-
+Format wajib:
 📍 Status Pasaran
-Pasaran perumahan berada dalam keadaan [Sebutkan Status: Kurang/Lebih Penawaran].
-
 🏠 Unit Perumahan Formal
-Terdapat [Bilangan] unit perumahan formal tersedia. (Rujuk: BIL UNIT NAPIC ALL)
-
 👨‍👩‍👧‍👦 Isi Rumah
-Bilangan isi rumah direkodkan sebanyak [Bilangan]. (Rujuk: Bil_Isi_Rumah)
-
-📉 Kekurangan Unit
-Dianggarkan [kekurangan/kelebihan] sebanyak [Bilangan] unit perumahan. (Rujuk: Kecukupan_NAPIC)
-
+📉 Kekurangan / Lebihan
 🏗️ Rumah Tidak Formal
-Sekitar [Bilangan] unit rumah tidak formal dianggarkan wujud. (Rujuk: Perumahan_tidakformal_semasa)
-
-3. Selepas struktur di atas, berikan huraian ringkas atau cadangan pembangunan.
-4. Gunakan Bahasa Malaysia yang profesional tetapi mudah difahami.
 
 Data CSV:
 ${RAW_CSV_DATA}
